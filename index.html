@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konsortium | Empowering NGOs, Uplifting Communities</title>
+    <meta name="description" content="Konsortium is a student-led charitable organization that empowers NGOs with marketing, operations, finance, and strategic support. Together, we uplift communities.">
+    <meta name="keywords" content="Konsortium, NGO support, charitable organization, community empowerment, student-led">
+    <meta property="og:title" content="Konsortium | Empowering NGOs, Uplifting Communities">
+    <meta property="og:description" content="A student-led organization helping NGOs thrive through streamlined operations, marketing, and financial support.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">K</div>
+            <div class="preloader-text">KONSORTIUM</div>
+            <div class="preloader-bar">
+                <div class="preloader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Particles Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo" id="navLogo">
+                <span class="logo-k">K</span>
+                <span class="logo-text">ONSORTIUM</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#ventures" class="nav-link">Ventures</a></li>
+                <li><a href="#founders" class="nav-link">Founders</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#impact" class="nav-link">Impact</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta" id="navCta">Get Involved</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="mobile-nav-link">Home</a></li>
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+            <li><a href="#ventures" class="mobile-nav-link">Ventures</a></li>
+            <li><a href="#founders" class="mobile-nav-link">Founders</a></li>
+            <li><a href="#services" class="mobile-nav-link">Services</a></li>
+            <li><a href="#impact" class="mobile-nav-link">Impact</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="mobile-cta">Get Involved</a>
+    </div>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-bg-grid"></div>
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+            <div class="hero-content">
+                <div class="hero-badge fade-in">
+                    <span class="badge-dot"></span>
+                    Student-Led &bull; Community-Driven &bull; Future-Focused
+                </div>
+                <h1 class="hero-title fade-in">
+                    <span class="hero-title-line">Empowering NGOs.</span>
+                    <span class="hero-title-line hero-title-gold">Uplifting Communities.</span>
+                </h1>
+                <p class="hero-subtitle fade-in">
+                    We are Konsortium — a student-led charitable organization streamlining NGO operations, 
+                    from marketing to finance, while giving back to the communities we serve.
+                </p>
+                <div class="hero-buttons fade-in">
+                    <a href="#about" class="btn btn-primary">
+                        <span>Discover Our Story</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#ventures" class="btn btn-secondary">
+                        <span>Our Ventures</span>
+                    </a>
+                </div>
+                <div class="hero-stats fade-in">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-target="4">0</span><span class="hero-stat-plus">+</span>
+                        <span class="hero-stat-label">Active Ventures</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-target="2">0</span>
+                        <span class="hero-stat-label">Passionate Founders</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-target="1">0</span>
+                        <span class="hero-stat-label">Bold Mission</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Marquee Section -->
+        <section class="marquee-section">
+            <div class="marquee-track">
+                <div class="marquee-content">
+                    <span>NGO EMPOWERMENT</span>
+                    <span class="marquee-dot">◆</span>
+                    <span>KONSORTIA FILMS</span>
+                    <span class="marquee-dot">◆</span>
+                    <span>IRISE CAPITAL</span>
+                    <span class="marquee-dot">◆</span>
+                    <span>COMMUNITY IMPACT</span>
+                    <span class="marquee-dot">◆</span>
+                    <span>CHARITY & GIVING</span>
+                    <span class="marquee-dot">◆</span>
+                    <span>CREATIVE ARTS</span>
+                    <span class="marquee-dot">◆</span>
+                    <span>STUDENT LED</span>
+                    <span class="marquee-dot">◆</span>
+                    <span>NGO EMPOWERMENT</span>
+                    <span class="marquee-dot">◆</span>
+                    <span>KONSORTIA FILMS</span>
+                    <span class="marquee-dot">◆</span>
+                    <span>IRISE CAPITAL</span>
+                    <span class="marquee-dot">◆</span>
+                    <span>COMMUNITY IMPACT</span>
+                    <span class="marquee-dot">◆</span>
+                    <span>CHARITY & GIVING</span>
+                    <span class="marquee-dot">◆</span>
+                    <span>CREATIVE ARTS</span>
+                    <span class="marquee-dot">◆</span>
+                    <span>STUDENT LED</span>
+                    <span class="marquee-dot">◆</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about-section" id="about">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-tag">WHO WE ARE</span>
+                    <h2 class="section-title">Built by Students. <span class="text-gold">Driven by Purpose.</span></h2>
+                    <p class="section-subtitle">Konsortium exists to be the backbone of NGOs that are changing the world — we handle the heavy lifting so they can focus on what matters most.</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card about-card-main reveal">
+                        <div class="about-card-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>We believe every NGO, no matter how small, deserves world-class support. Konsortium provides the infrastructure — marketing, operations, finance management, and strategic guidance — that allows charitable organizations to maximize their impact without drowning in logistics.</p>
+                    </div>
+                    <div class="about-card reveal" style="animation-delay: 0.1s">
+                        <div class="about-card-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h3>Student-Led</h3>
+                        <p>Founded and run by teenagers who refuse to wait for change. We're proof that age is just a number when it comes to making a difference.</p>
+                    </div>
+                    <div class="about-card reveal" style="animation-delay: 0.2s">
+                        <div class="about-card-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        </div>
+                        <h3>Comprehensive Support</h3>
+                        <p>From marketing strategies to financial planning, operational frameworks to creative content — we cover every angle an NGO needs help with.</p>
+                    </div>
+                    <div class="about-card about-card-full reveal" style="animation-delay: 0.3s">
+                        <div class="about-card-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </div>
+                        <h3>Giving Back</h3>
+                        <p>Beyond helping NGOs, we're launching our own charity initiatives — collecting donations from schools and giving back to the communities we serve.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ventures Section -->
+        <section class="section ventures-section" id="ventures">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-tag">OUR ECOSYSTEM</span>
+                    <h2 class="section-title">A Universe of <span class="text-gold">Impact.</span></h2>
+                    <p class="section-subtitle">Konsortium is more than one thing — it's a network of ventures united by a single vision: to create positive change through every possible medium.</p>
+                </div>
+                <div class="ventures-grid">
+                    <div class="venture-card venture-card-large reveal" id="ventureFilms">
+                        <div class="venture-card-bg"></div>
+                        <div class="venture-card-content">
+                            <div class="venture-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/><line x1="17" y1="17" x2="22" y2="17"/></svg>
+                            </div>
+                            <span class="venture-status">Active on YouTube</span>
+                            <h3><a href="https://www.youtube.com/@konsortiafilms" target="_blank" rel="noopener noreferrer">Konsortia Films</a></h3>
+                            <p>Our creative arm producing short films that tell stories that matter. Through cinema, we amplify voices that need to be heard and explore narratives that spark conversation.</p>
+                            <div class="venture-tags">
+                                <span>Short Films</span>
+                                <a href="https://www.youtube.com/@konsortiafilms" target="_blank" rel="noopener noreferrer">YouTube</a>
+                                <span>Storytelling</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="venture-card reveal" id="ventureIrise" style="animation-delay: 0.15s">
+                        <div class="venture-card-bg"></div>
+                        <div class="venture-card-content">
+                            <div class="venture-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                            </div>
+                            <span class="venture-status">Operational</span>
+                            <h3><a href="https://raajveer.com/" target="_blank" rel="noopener noreferrer">IRISE Capital</a></h3>
+                            <p>Our investment advisory subsidiary providing consultative financial guidance across cryptocurrency, stocks, and traditional markets.</p>
+                            <div class="venture-tags">
+                                <span>Finance</span>
+                                <a href="https://raajveer.com/" target="_blank" rel="noopener noreferrer">Advisory</a>
+                                <span>Investment</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="venture-card reveal" id="ventureArt" style="animation-delay: 0.25s">
+                        <div class="venture-card-bg"></div>
+                        <div class="venture-card-content">
+                            <div class="venture-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                            </div>
+                            <span class="venture-status venture-status-soon">Coming Soon</span>
+                            <h3>Art Initiative</h3>
+                            <p>A creative project blending art with social impact. Stay tuned for something extraordinary that will change how you experience visual expression.</p>
+                            <div class="venture-tags">
+                                <span>Art</span>
+                                <span>Creative</span>
+                                <span>Social Impact</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="venture-card venture-card-large reveal" id="ventureCharity" style="animation-delay: 0.35s">
+                        <div class="venture-card-bg"></div>
+                        <div class="venture-card-content">
+                            <div class="venture-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </div>
+                            <span class="venture-status venture-status-soon">Launching Soon</span>
+                            <h3>Charity Drive</h3>
+                            <p>Our charitable initiative collecting donations from schools and communities to fund education, healthcare, and essential needs for underserved populations.</p>
+                            <div class="venture-tags">
+                                <span>Charity</span>
+                                <span>Donations</span>
+                                <span>Education</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Numbers Section -->
+        <section class="section impact-section" id="impact">
+            <div class="impact-bg"></div>
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-tag">OUR IMPACT</span>
+                    <h2 class="section-title">Numbers That <span class="text-gold">Tell Our Story.</span></h2>
+                </div>
+                <div class="impact-grid">
+                    <div class="impact-card reveal">
+                        <div class="impact-number"><span class="counter" data-target="4">0</span>+</div>
+                        <div class="impact-label">Active Ventures</div>
+                        <div class="impact-bar"><div class="impact-bar-fill" style="width: 80%"></div></div>
+                    </div>
+                    <div class="impact-card reveal" style="animation-delay: 0.1s">
+                        <div class="impact-number"><span class="counter" data-target="3">0</span>+</div>
+                        <div class="impact-label">NGOs Supported</div>
+                        <div class="impact-bar"><div class="impact-bar-fill" style="width: 60%"></div></div>
+                    </div>
+                    <div class="impact-card reveal" style="animation-delay: 0.2s">
+                        <div class="impact-number"><span class="counter" data-target="10">0</span>+</div>
+                        <div class="impact-label">Team Members</div>
+                        <div class="impact-bar"><div class="impact-bar-fill" style="width: 70%"></div></div>
+                    </div>
+                    <div class="impact-card reveal" style="animation-delay: 0.3s">
+                        <div class="impact-number">∞</div>
+                        <div class="impact-label">Potential Impact</div>
+                        <div class="impact-bar"><div class="impact-bar-fill" style="width: 100%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section services-section" id="services">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-tag">WHAT WE DO</span>
+                    <h2 class="section-title">How We Help <span class="text-gold">NGOs Thrive.</span></h2>
+                    <p class="section-subtitle">We provide end-to-end support so NGOs can focus on their mission while we handle the rest.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card reveal" id="serviceMarketing">
+                        <div class="service-number">01</div>
+                        <div class="service-icon">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        </div>
+                        <h3>Marketing & Outreach</h3>
+                        <p>Social media strategy, brand identity, content creation, and digital marketing campaigns that amplify an NGO's voice and reach broader audiences.</p>
+                    </div>
+                    <div class="service-card reveal" style="animation-delay: 0.1s" id="serviceOps">
+                        <div class="service-number">02</div>
+                        <div class="service-icon">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                        </div>
+                        <h3>Operations Management</h3>
+                        <p>We streamline workflows, set up efficient processes, and build operational frameworks that help NGOs run smoothly without burning out their teams.</p>
+                    </div>
+                    <div class="service-card reveal" style="animation-delay: 0.2s" id="serviceFinance">
+                        <div class="service-number">03</div>
+                        <div class="service-icon">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <h3>Financial Planning</h3>
+                        <p>Budget management, fundraising strategy, financial reporting, and resource allocation guidance to keep NGOs financially healthy and transparent.</p>
+                    </div>
+                    <div class="service-card reveal" style="animation-delay: 0.3s" id="serviceStrategy">
+                        <div class="service-number">04</div>
+                        <div class="service-icon">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        </div>
+                        <h3>Strategic Guidance</h3>
+                        <p>Long-term planning, goal setting, partnership development, and growth strategies that help NGOs scale their impact sustainably.</p>
+                    </div>
+                    <div class="service-card reveal" style="animation-delay: 0.4s" id="serviceCreative">
+                        <div class="service-number">05</div>
+                        <div class="service-icon">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <h3>Creative & Content</h3>
+                        <p>Video production, graphic design, website development, and storytelling that brings an NGO's mission to life through compelling visual content.</p>
+                    </div>
+                    <div class="service-card reveal" style="animation-delay: 0.5s" id="serviceTech">
+                        <div class="service-number">06</div>
+                        <div class="service-icon">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <h3>Tech & Digital</h3>
+                        <p>Website development, app solutions, digital infrastructure setup, and technology consulting to bring NGOs into the modern digital age.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founders Section -->
+        <section class="section founders-section" id="founders">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-tag">THE VISIONARIES</span>
+                    <h2 class="section-title">Meet Our <span class="text-gold">Founders.</span></h2>
+                    <p class="section-subtitle">Two teenagers with one audacious dream — building an organization that empowers change-makers everywhere.</p>
+                </div>
+                <div class="founders-grid">
+                    <div class="founder-card reveal" id="founderMaroof">
+                        <div class="founder-avatar">
+                            <img src="maroof.jpg" alt="Maroof Sheik - Co-Founder of Konsortium" class="founder-avatar-img">
+                            <div class="founder-avatar-ring"></div>
+                        </div>
+                        <div class="founder-info">
+                            <h3>Maroof Sheik</h3>
+                            <span class="founder-role">Co-Founder</span>
+                            <p class="founder-bio">A driven student entrepreneur with a passion for building systems that help others succeed. Maroof brings the strategic vision and relentless energy that powers Konsortium's mission to transform how NGOs operate. His ability to see the big picture while executing on the details makes him an invaluable force behind the organization.</p>
+                            <div class="founder-socials">
+                                <a href="#" class="founder-social-link" id="maroofTwitter">Twitter</a>
+                                <a href="https://linkedin.com/in/maroof-a-sheikh-118a27365" target="_blank" rel="noopener noreferrer" class="founder-social-link" id="maroofLinkedin">LinkedIn</a>
+                                <a href="#" class="founder-social-link" id="maroofInstagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="founder-card reveal" style="animation-delay: 0.2s" id="founderRaajveer">
+                        <div class="founder-avatar">
+                            <img src="raajveer.jpg" alt="Raajveer Nath - Co-Founder of Konsortium" class="founder-avatar-img">
+                            <div class="founder-avatar-ring"></div>
+                        </div>
+                        <div class="founder-info">
+                            <h3>Raajveer Nath</h3>
+                            <span class="founder-role">Co-Founder</span>
+                            <p class="founder-bio">The creative and financial mind behind Konsortium, Raajveer also leads IRISE Capital as its Founder and CEO. With experience managing significant investment portfolios and a deep understanding of digital content ecosystems, he brings a unique blend of business acumen and creative thinking to everything Konsortium does.</p>
+                            <div class="founder-socials">
+                                <a href="#" class="founder-social-link" id="raajveerTwitter">Twitter</a>
+                                <a href="https://www.linkedin.com/in/raajveernath" target="_blank" rel="noopener noreferrer" class="founder-social-link" id="raajveerLinkedin">LinkedIn</a>
+                                <a href="#" class="founder-social-link" id="raajveerInstagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Timeline Section -->
+        <section class="section timeline-section">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-tag">OUR JOURNEY</span>
+                    <h2 class="section-title">How It All <span class="text-gold">Started.</span></h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-item reveal" style="animation-delay: 0s">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">The Spark</span>
+                            <h3>An Idea Was Born</h3>
+                            <p>Two students realized that countless NGOs struggle not because of lack of passion, but lack of operational support. Konsortium was conceived as the solution.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal" style="animation-delay: 0.15s">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Building the Foundation</span>
+                            <h3>Team & Structure</h3>
+                            <p>We assembled a team of passionate student volunteers, built our operational framework, and began partnering with our first NGOs.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal" style="animation-delay: 0.3s">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Expanding Horizons</span>
+                            <h3>Ventures Launch</h3>
+                            <p>Konsortia Films hit YouTube. IRISE Capital began advisory operations. The ecosystem began to take shape.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal" style="animation-delay: 0.45s">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">What's Next</span>
+                            <h3>The Future is Bright</h3>
+                            <p>Art initiatives, charity drives, school donation campaigns, and expanded NGO support — the best chapters are still being written.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fun Interactive Section -->
+        <section class="section interactive-section">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-tag">JOIN THE MOVEMENT</span>
+                    <h2 class="section-title">Be Part of <span class="text-gold">Something Bigger.</span></h2>
+                </div>
+                <div class="interactive-cards">
+                    <div class="interactive-card reveal" id="interactiveVolunteer">
+                        <div class="interactive-card-front">
+                            <div class="interactive-emoji">🙋</div>
+                            <h3>Volunteer</h3>
+                            <p>Join our team</p>
+                            <span class="flip-hint">Hover to learn more →</span>
+                        </div>
+                        <div class="interactive-card-back">
+                            <h3>Volunteer With Us</h3>
+                            <p>Whether you're a student passionate about social change, marketing, finance, or content creation — there's a place for you at Konsortium. No experience required, just passion.</p>
+                        </div>
+                    </div>
+                    <div class="interactive-card reveal" style="animation-delay: 0.1s" id="interactivePartner">
+                        <div class="interactive-card-front">
+                            <div class="interactive-emoji">🤝</div>
+                            <h3>Partner</h3>
+                            <p>NGO seeking help?</p>
+                            <span class="flip-hint">Hover to learn more →</span>
+                        </div>
+                        <div class="interactive-card-back">
+                            <h3>Partner With Us</h3>
+                            <p>If you run an NGO and need support with operations, marketing, or finances, we're here for you. Our services are designed specifically for charitable organizations looking to maximize their impact.</p>
+                        </div>
+                    </div>
+                    <div class="interactive-card reveal" style="animation-delay: 0.2s" id="interactiveDonate">
+                        <div class="interactive-card-front">
+                            <div class="interactive-emoji">💛</div>
+                            <h3>Donate</h3>
+                            <p>Support the cause</p>
+                            <span class="flip-hint">Hover to learn more →</span>
+                        </div>
+                        <div class="interactive-card-back">
+                            <h3>Support Our Mission</h3>
+                            <p>Every contribution, no matter how small, helps us support more NGOs and expand our charitable initiatives. Your donation directly fuels community impact.</p>
+                        </div>
+                    </div>
+                    <div class="interactive-card reveal" style="animation-delay: 0.3s" id="interactiveSpread">
+                        <div class="interactive-card-front">
+                            <div class="interactive-emoji">📢</div>
+                            <h3>Share</h3>
+                            <p>Spread the word</p>
+                            <span class="flip-hint">Hover to learn more →</span>
+                        </div>
+                        <div class="interactive-card-back">
+                            <h3>Spread The Word</h3>
+                            <p>Follow us on social media, share our content, and help us reach more NGOs that need support. Sometimes the biggest impact comes from simply telling others.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-tag">GET IN TOUCH</span>
+                    <h2 class="section-title">Let's Create <span class="text-gold">Impact Together.</span></h2>
+                    <p class="section-subtitle">Whether you're an NGO seeking support, a student wanting to volunteer, or someone who believes in our mission — we'd love to hear from you.</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info reveal">
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>hello@konsortium.org</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <h4>Based In</h4>
+                                <p>Hyderabad, India</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            </div>
+                            <div>
+                                <h4>Social Media</h4>
+                                <p>@konsortium.official</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form reveal" style="animation-delay: 0.2s" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">Your Name</label>
+                                <input type="text" id="contactName" name="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Your Email</label>
+                                <input type="email" id="contactEmail" name="email" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Subject</label>
+                            <select id="contactSubject" name="subject" required>
+                                <option value="" disabled selected>What's this about?</option>
+                                <option value="ngo-support">NGO Support Request</option>
+                                <option value="volunteer">I Want to Volunteer</option>
+                                <option value="partnership">Partnership Inquiry</option>
+                                <option value="donation">Donation Information</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Your Message</label>
+                            <textarea id="contactMessage" name="message" placeholder="Tell us what you're thinking..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                            <span>Send Message</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section faq-section">
+            <div class="section-container">
+                <div class="section-header reveal">
+                    <span class="section-tag">FAQ</span>
+                    <h2 class="section-title">Got <span class="text-gold">Questions?</span></h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item reveal" id="faq1">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What exactly does Konsortium do?</span>
+                            <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Konsortium is an umbrella organization that helps NGOs function more effectively. We provide support in marketing, operations, financial management, strategic planning, and creative content production. Think of us as the support system that every NGO needs but often can't afford.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal" id="faq2">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Is Konsortium really run by teenagers?</span>
+                            <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! Konsortium was founded by Maroof Sheik and Raajveer Nath, both students who believe that meaningful impact doesn't require a certain age. Our team is made up of passionate young people who bring fresh perspectives and boundless energy to social impact.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal" id="faq3">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What is Konsortia Films?</span>
+                            <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Konsortia Films on YouTube is where we produce and publish short films. It's our creative outlet that uses storytelling to raise awareness about social issues, showcase talent, and create engaging content that resonates with our generation.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal" id="faq4">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How can my NGO get help from Konsortium?</span>
+                            <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Simply reach out to us through our contact form! We'll schedule a conversation to understand your needs and create a tailored support plan. Whether you need help with marketing, managing your finances, or streamlining operations, we've got you covered.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal" id="faq5">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What is IRISE Capital?</span>
+                            <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>IRISE Capital is a subsidiary of Konsortium that operates as an investment advisory firm. It provides consultative guidance in cryptocurrency, stocks, and mutual funds, helping clients make informed financial decisions. Visit raajveer.com to learn more.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo">
+                        <span class="logo-k">K</span>
+                        <span class="logo-text">ONSORTIUM</span>
+                    </a>
+                    <p class="footer-tagline">Empowering NGOs. Uplifting Communities. Built by students who dare to make a difference.</p>
+                    <div class="footer-social">
+                        <a href="https://www.youtube.com/@konsortiafilms" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube" id="socialYoutube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram" id="socialInstagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn" id="socialLinkedin">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links-grid">
+                    <div class="footer-links-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#ventures">Our Ventures</a></li>
+                            <li><a href="#founders">Founders</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>Ventures</h4>
+                        <ul>
+                            <li><a href="https://www.youtube.com/@konsortiafilms" target="_blank" rel="noopener noreferrer">Konsortia Films</a></li>
+                            <li><a href="https://raajveer.com/" target="_blank" rel="noopener noreferrer">IRISE Capital</a></li>
+                            <li><a href="#ventureArt">Art Initiative</a></li>
+                            <li><a href="#ventureCharity">Charity Drive</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>Get Involved</h4>
+                        <ul>
+                            <li><a href="#contact">Volunteer</a></li>
+                            <li><a href="#contact">Partner With Us</a></li>
+                            <li><a href="#contact">Donate</a></li>
+                            <li><a href="#contact">Spread the Word</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Konsortium. All rights reserved. Built with ❤️ by students.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
