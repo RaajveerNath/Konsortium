@@ -962,6 +962,30 @@ ul {
     border: 1px solid rgba(212, 166, 22, 0.15);
 }
 
+.venture-explore-link {
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(212, 166, 22, 0.25);
+    background: rgba(212, 166, 22, 0.08);
+    color: var(--gold-light);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    transition: all var(--transition-fast);
+}
+
+.venture-explore-link:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--black);
+    transform: translateY(-1px);
+}
+
 /* --- Impact Section --- */
 .impact-section {
     background: linear-gradient(180deg, var(--dark-900), var(--black));
@@ -1129,7 +1153,7 @@ ul {
 
 .founders-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
 
