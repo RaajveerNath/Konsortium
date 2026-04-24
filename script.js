@@ -430,16 +430,26 @@ document.addEventListener('DOMContentLoaded', () => {
     class TextScramble {
         constructor(el) {
             this.el = el;
-            this.chars = '!<>-_\\/[]{}—=+*^?#________';
+            this.chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*+-_=/?';
             this.frame = 0;
             this.frameRequest = null;
+            this.fallbackTimer = null;
+            this.resolve = null;
+            this.queue = [];
+            this.targetText = '';
+            this.isComplete = false;
         }
 
         setText(newText) {
+            this.forceComplete();
             const oldText = this.el.textContent;
             const length = Math.max(oldText.length, newText.length);
-            const promise = new Promise(resolve => this.resolve = resolve);
+            const promise = new Promise(resolve => {
+                this.resolve = resolve;
+            });
             this.queue = [];
+            this.targetText = newText;
+            this.isComplete = false;
 
             for (let i = 0; i < length; i++) {
                 const from = oldText[i] || '';
@@ -451,6 +461,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             cancelAnimationFrame(this.frameRequest);
             this.frame = 0;
+            if (length === 0) {
+                this.forceComplete();
+                return promise;
+            }
+
+            // Failsafe: always settle to the intended final text.
+            const maxEnd = this.queue.reduce((max, item) => Math.max(max, item.end), 0);
+            const fallbackMs = Math.max(1200, maxEnd * 20 + 400);
+            this.fallbackTimer = setTimeout(() => this.forceComplete(), fallbackMs);
+
             this.update();
             return promise;
         }
@@ -464,29 +484,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (this.frame >= end) {
                     complete++;
-                    output += to;
+                    output += this.escapeHtml(to);
                 } else if (this.frame >= start) {
                     if (!char || Math.random() < 0.28) {
                         char = this.chars[Math.floor(Math.random() * this.chars.length)];
                         this.queue[i].char = char;
                     }
-                    output += `<span class="scramble-char" style="color: var(--gold); opacity: 0.7;">${char}</span>`;
+                    output += `<span class="scramble-char" style="color: var(--gold); opacity: 0.7;">${this.escapeHtml(char)}</span>`;
                 } else {
-                    output += from;
+                    output += this.escapeHtml(from);
                 }
             }
 
             this.el.innerHTML = output;
 
             if (complete === this.queue.length) {
-                this.resolve();
+                this.forceComplete();
             } else {
                 this.frameRequest = requestAnimationFrame(() => this.update());
                 this.frame++;
             }
         }
-    }
 
+        forceComplete() {
+            cancelAnimationFrame(this.frameRequest);
+            if (this.fallbackTimer) {
+                clearTimeout(this.fallbackTimer);
+                this.fallbackTimer = null;
+            }
+
+            if (this.resolve && !this.isComplete) {
+                this.isComplete = true;
+                this.el.textContent = this.targetText;
+                const done = this.resolve;
+                this.resolve = null;
+                done();
+            }
+        }
+
+        escapeHtml(value) {
+            return value
+                .replaceAll('&', '&amp;')
+                .replaceAll('<', '&lt;')
+                .replaceAll('>', '&gt;');
+        }
+    }
     // Apply scramble to hero title on load
     setTimeout(() => {
         const titleLines = document.querySelectorAll('.hero-title-line');
