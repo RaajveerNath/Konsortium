@@ -1246,6 +1246,13 @@ ul {
     margin-bottom: 4px;
 }
 
+.founder-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+}
+
 .founder-role {
     display: inline-block;
     font-size: 14px;
@@ -1267,6 +1274,7 @@ ul {
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: auto;
 }
 
 .founder-social-link {
